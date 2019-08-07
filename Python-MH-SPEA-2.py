@@ -215,3 +215,53 @@ ax1.scatter(func_1_values, func_2_values, c = 'red',   s = 25, marker = 'o', lab
 ax1.scatter(schaffer_1,    schaffer_2,    c = 'black', s = 2,  marker = 's', label = 'Pareto Front')
 plt.legend(loc = 'upper right');
 plt.show()
+
+######################## Part 2 - Usage ####################################
+
+# Kursawe Function 1
+def kursawe_f1(variables_values = [0, 0]):
+    f1 = 0
+    if (len(variables_values) == 1):
+        f1 = f1 - 10 * math.exp(-0.2 * math.sqrt(variables_values[0]**2 + variables_values[0]**2))
+    else:
+        for i in range(0, len(variables_values)-1):
+            f1 = f1 - 10 * math.exp(-0.2 * math.sqrt(variables_values[i]**2 + variables_values[i + 1]**2))
+    return f1
+
+# Kursawe Function 2
+def kursawe_f2(variables_values = [0, 0]):
+    f2 = 0
+    for i in range(0, len(variables_values)):
+        f2 = f2 + abs(variables_values[i])**0.8 + 5 * math.sin(variables_values[i]**3)
+    return f2
+
+# Calling SPEA-2 Function
+spea_2_kursawe = strength_pareto_evolutionary_algorithm_2(population_size = 50, archive_size = 50, mutation_rate = 0.1, min_values = [-5,-5], max_values = [5,5], list_of_functions = [kursawe_f1, kursawe_f2], generations = 100, mu = 1, eta = 1)
+
+# Kursawe Pareto Front
+kursawe = np.zeros((10000, 4))
+x = np.arange(-5, 5, 0.1)
+count = 0
+for j in range (0,100):
+    for k in range (0, 100):
+            kursawe[count,0] = x[j]
+            kursawe[count,1] = x[k]
+            count = count + 1
+        
+for i in range (0, kursawe.shape[0]):
+    kursawe[i,2] = kursawe_f1(variables_values = [kursawe[i,0], kursawe[i,1]])
+    kursawe[i,3] = kursawe_f2(variables_values = [kursawe[i,0], kursawe[i,1]])
+
+kursawe_1 = kursawe[:,2]
+kursawe_2 = kursawe[:,3]
+
+# Graph Pareto Front Solutions
+func_1_values = spea_2_kursawe[:,-2]
+func_2_values = spea_2_kursawe[:,-1]
+ax1 = plt.figure(figsize = (15,15)).add_subplot(111)
+plt.xlabel('Function 1', fontsize = 12)
+plt.ylabel('Function 2', fontsize = 12)
+ax1.scatter(func_1_values, func_2_values, c = 'red',   s = 25, marker = 'o', label = 'SPEA-2')
+ax1.scatter(kursawe_1,     kursawe_2,     c = 'black', s = 2,  marker = 's', label = 'Solutions')
+plt.legend(loc = 'upper right');
+plt.show()
