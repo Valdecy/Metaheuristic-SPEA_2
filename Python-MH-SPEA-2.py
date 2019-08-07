@@ -84,9 +84,6 @@ def fitness_calculation(population, raw_fitness, number_of_functions = 2):
                 y = np.copy(population[j, population.shape[1]-number_of_functions:])
                 distance[i,j] =  euclidean_distance(x = x, y = y)                    
     for i in range(0, fitness.shape[0]):
-        #distance = pd.DataFrame(distance)
-        #distance = distance.sort_values(by = i, axis = 1, ascending = True)
-        #distance = distance.values
         distance_ordered = (distance[distance[:,i].argsort()]).T
         fitness[i,0] = raw_fitness[i,0] + 1/(distance_ordered[i,k] + 2)
     return fitness
