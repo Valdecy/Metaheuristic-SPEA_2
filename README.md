@@ -1,6 +1,7 @@
 # Metaheuristic-SPEA_2
 SPEA 2 (Strength Pareto Evolutionary Algorithm 2) - Function to Minimize Multiple Objectives with Continuous Variables. Real Values Encoded. The function returns: 1) An array containing the used value(s) for each function and the output for each function f(x). For example, if the functions f(x1, x2) and g(x1, x2) are used in this same order, then the array would be [x1, x2, f(x1, x2), g(x1, x2)].  
 
+
 * population_size = The population size. The Default Value is 5.
 
 * archive_size = The archive size. It is an external set of individuals that is formed from the non-dominated solutions. The Default Value is 5.
@@ -16,6 +17,7 @@ SPEA 2 (Strength Pareto Evolutionary Algorithm 2) - Function to Minimize Multipl
 * list_of_functions = A list of functions. The default value is two fucntions [func_1, func_2].
 
 * mu = Value of the breed operator. The Default Value is 1.
+
 
 # Acknowledgement 
 This section is dedicated to all the people that helped to improve or correct the code. Thank you very much!
