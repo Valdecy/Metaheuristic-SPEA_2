@@ -213,7 +213,7 @@ plt.xlabel('Function 1', fontsize = 12)
 plt.ylabel('Function 2', fontsize = 12)
 ax1.scatter(func_1_values, func_2_values, c = 'red',   s = 25, marker = 'o', label = 'SPEA-2')
 ax1.scatter(schaffer_1,    schaffer_2,    c = 'black', s = 2,  marker = 's', label = 'Pareto Front')
-plt.legend(loc = 'upper right');
+plt.legend(loc = 'upper right')
 plt.show()
 
 ######################## Part 2 - Usage ####################################
@@ -263,5 +263,5 @@ plt.xlabel('Function 1', fontsize = 12)
 plt.ylabel('Function 2', fontsize = 12)
 ax1.scatter(func_1_values, func_2_values, c = 'red',   s = 25, marker = 'o', label = 'SPEA-2')
 ax1.scatter(kursawe_1,     kursawe_2,     c = 'black', s = 2,  marker = 's', label = 'Solutions')
-plt.legend(loc = 'upper right');
+plt.legend(loc = 'upper right')
 plt.show()
