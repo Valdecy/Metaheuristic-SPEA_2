@@ -20,6 +20,11 @@ SPEA 2 (Strength Pareto Evolutionary Algorithm 2) - Function to Minimize Multipl
 
 * mu = Value of the breed operator. The Default Value is 1.
 
+Kursawe Function Example:
+
+<p align="center"> 
+<img src="https://github.com/Valdecy/Metaheuristic-SPEA_2/blob/master/Python-MH-SPEA-2.gif">
+</p>
 
 # Acknowledgement 
 This section is dedicated to all the people that helped to improve or correct the code. Thank you very much!
