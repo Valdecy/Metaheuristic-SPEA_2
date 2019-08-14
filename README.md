@@ -25,7 +25,7 @@ SPEA 2 (Strength Pareto Evolutionary Algorithm 2) - Function to Minimize Multipl
 
 Kursawe Function Example:
 <p align="center"> 
-<img src="https://github.com/Valdecy/Metaheuristic-SPEA_2/blob/master/Python-MH-SPEA-2.gif">
+<img src="https://github.com/Valdecy/Metaheuristic-SPEA_2/blob/master/Python-MH-SPEA-2-Kursawe.gif">
 </p>
 
 # Acknowledgement 
