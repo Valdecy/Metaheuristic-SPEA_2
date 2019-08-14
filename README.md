@@ -16,7 +16,7 @@ SPEA 2 (Strength Pareto Evolutionary Algorithm 2) - Function to Minimize Multipl
 
 * generations = The total number of iterations. The Default Value is 50.
 
-* list_of_functions = A list of functions. The default value is two fucntions [func_1, func_2].
+* list_of_functions = A list of functions. The default value is two functions [func_1, func_2].
 
 * mu = Value of the breed operator. The Default Value is 1.
 
