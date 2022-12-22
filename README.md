@@ -20,7 +20,14 @@ SPEA 2 (Strength Pareto Evolutionary Algorithm 2) - Function to Minimize Multipl
 
 * mu = Value of the breed operator. The Default Value is 1.
 
+# Single Objective Optimization
+For Single Objective Optimization try [pyMetaheuristic](https://github.com/Valdecy/pyMetaheuristic)
 
+# Multiobjective Optimization or Many Objectives Optimization
+For Multiobjective Optimization or Many Objectives Optimization try [pyMultiobjective](https://github.com/Valdecy/pyMultiobjective)
+
+# TSP (Travelling Salesman Problem)
+For Travelling Salesman Problems try [pyCombinatorial](https://github.com/Valdecy/pyCombinatorial)
 
 
 Kursawe Function Example:
